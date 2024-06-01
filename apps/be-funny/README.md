@@ -45,7 +45,7 @@ pip install apps/be-funny
 
 For developers, install using Poetry to handle dependencies:
 ```console
-poetry install
+poetry install -C apps/be-funny
 ```
 
 
