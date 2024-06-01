@@ -1,13 +1,3 @@
-# A demo of Python monorepo
-
-- Use poetry for packaging and dependency management
-- `apps/` for applications. Applications shouldn't import other applications.
-- `libs/` for library. Applications can import libraries.
-
-Check the README under `apps/be-funny/`
-
-
-
 # Python Monorepo Demo
 
 This repository demonstrates a Python monorepo structure using Poetry for packaging and dependency management.
@@ -25,6 +15,8 @@ This repository demonstrates a Python monorepo structure using Poetry for packag
 ## Applications
 
 For more details on individual applications, check the README under each application's directory. For example, see the README under `apps/be-funny/`.
+
+Each application can contain a `Dockerfile` to build the container for the application. This is not part of the demo, but is a common pattern in production.
 
 ## Libraries
 
