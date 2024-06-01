@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "be-funny"
+name = "modeling"
 version = "0.1.0"
 description = ""
 authors = ["Joseph Yen <joseph.yen@gmail.com>"]
@@ -8,19 +8,12 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8.1"
-click = "^8.1.7"
-modeling = {path = "../../libs/modeling"}
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^7.0.0"
-pytest = "^8.2.1"
 isort = "^5.13.2"
-black = "^24.4.2"
+pyright = "^1.1.365"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.poetry.scripts]
-be-funny = 'be_funny.cli.__main__:main'
-

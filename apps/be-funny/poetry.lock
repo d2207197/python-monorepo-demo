@@ -138,6 +138,19 @@ files = [
 ]
 
 [[package]]
+name = "modeling"
+version = "0.1.0"
+description = ""
+optional = false
+python-versions = "^3.8.1"
+files = []
+develop = false
+
+[package.source]
+type = "directory"
+url = "../../libs/modeling"
+
+[[package]]
 name = "mypy-extensions"
 version = "1.0.0"
 description = "Type system extensions for programs checked with the mypy type checker."
@@ -270,4 +283,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.1"
-content-hash = "abb37cbc3fa446e29753b94725de6d98ae42cf088b5708a34cd57e967d135a3b"
+content-hash = "01e4e334d9c1d0e1efa2672481c5f8411f81da52d7373f8568136aac1be9c8fd"
