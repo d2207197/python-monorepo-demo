@@ -10,22 +10,23 @@ This repository demonstrates a Python monorepo structure using Poetry for packag
 ## Getting Started
 
 1. **Install Poetry**: Follow the [Poetry installation guide](https://python-poetry.org/docs/#installation) to install Poetry.
-2. Check the README under `apps/be-funny/` and follow the installation instructions.
-3. Check the structure and `pyproject.toml` under `libs/` to understand how dependencies work.
-4. Check the `pyproject.toml` under `apps/be-funny/` to understand how scripts are defined, and dependencies are managed.
+2. Refer to the README in `apps/be-funny/` and follow the installation instructions.
+3. Review the structure and `pyproject.toml` in `libs/` to understand dependency management.
+4. Examine the `pyproject.toml` in `apps/be-funny/` to understand script definitions and dependency management.
 
 ## Guidelines
 ### Applications
 
+- Split an application into multiple applications only if necessary, such as when multiple services are highly unrelated and managed by different teams.
 - Applications must not be imported by other applications or libraries.
-- Each application may include a `Dockerfile` for containerization. Although not shown in this repository, it is a common practice in production environments.
-- Define Python dependencies in the root `pyproject.toml` file. The `Dockerfile` should only manage non-Python dependencies, with the exception of Python itself, Poetry, and pip.
+- Each application may include a `Dockerfile` for containerization. While not shown in this repository, it is a common practice in production environments.
+- Define Python dependencies in the root `pyproject.toml` file. The `Dockerfile` should manage only non-Python dependencies, except for Python itself, Poetry, and pip.
 
 ### Libraries
 
+- Libraries are required when multiple applications need to use the same functionality. Usually, it's originally a package or module under one original application.
 - Libraries are located in the `libs/` directory and can be imported by both applications and other libraries.
 - Libraries should not contain a `Dockerfile`. All dependencies must be managed through the `pyproject.toml` file.
-
 
 ## License
 
