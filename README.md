@@ -4,5 +4,5 @@
 - `apps/` for applications. Applications shouldn't import other applications.
 - `libs/` for library. Applications can import libraries.
 
-Check `apps/be-funny` for an application example.
+Check the README under `apps/be-funny/`
 
