@@ -10,9 +10,9 @@ This repository demonstrates a Python monorepo structure using Poetry for packag
 ## Getting Started
 
 1. **Install Poetry**: Follow the [Poetry installation guide](https://python-poetry.org/docs/#installation) to install Poetry.
-2. Refer to the README in `apps/be-funny/` and follow the installation instructions.
-3. Review the structure and `pyproject.toml` in `libs/` to understand dependency management.
-4. Examine the `pyproject.toml` in `apps/be-funny/` to understand script definitions and dependency management.
+2. Refer to the [README](apps/be-funny/README.md) in [`apps/be-funny/`](apps/be-funny/) and follow the installation instructions.
+3. Review the structure and `pyproject.toml` in [`libs/`](libs/) to understand dependency management.
+4. Examine the `pyproject.toml` in [`apps/be-funny/`](apps/be-funny) to understand script definitions and dependency management.
 
 ## Guidelines
 ### Applications
@@ -20,7 +20,7 @@ This repository demonstrates a Python monorepo structure using Poetry for packag
 - Split an application into multiple applications only if necessary, such as when multiple services are highly unrelated and managed by different teams.
 - Applications must not be imported by other applications or libraries.
 - Each application may include a `Dockerfile` for containerization. While not shown in this repository, it is a common practice in production environments.
-- Define Python dependencies in the root `pyproject.toml` file. The `Dockerfile` should manage only non-Python dependencies, except for Python itself, Poetry, and pip.
+- Define Python dependencies in the root `pyproject.toml` file. The `Dockerfile` should manage only non-Python dependencies, except for Python, Poetry, and pip themselves.
 
 ### Libraries
 
