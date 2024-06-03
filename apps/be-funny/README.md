@@ -8,9 +8,13 @@ This is a demo application that demonstrates the use of various tools and librar
 - CLI interface implemented using Click, accessible via the `be-funny` command.
 - Can be imported as a Python package.
 
-## Cross-package Dependencies
-- `libs/modeling`
-- `libs/processing`
+## In Repository Dependencies
+Two in-repository dependencies are registered with the following lines in `pyproject.toml`.
+```toml
+[tool.poetry.dependencies]
+modeling = { path = "../../libs/modeling" }
+processing = { path = "../../libs/processing" }
+```
 
 ## Setup
 
@@ -42,14 +46,13 @@ For end users, install using pip:
 pip install apps/be-funny
 ```
 
-
 For developers, install using Poetry to handle dependencies:
 ```console
 poetry install -C apps/be-funny
 ```
 
-
 ## Usage
+Applications often serve as CLI tools or services. A dedicated module for the CLI interface is recommended. Here, the CLI is implemented in `be_funny/cli/`.
 
 ### Invoke CLI Interface
 Access help for the CLI:
@@ -58,6 +61,12 @@ Access help for the CLI:
 be-funny --help
 python -m be_funny.cli --help # Equivalent to the above
 be-funny create-dataset --help
+```
+
+This package registered a script with the following entry in `pyproject.toml`. After `pip install` or `poetry install`, you can invoke the CLI interface using `be-funny`.
+```toml
+[tool.poetry.scripts]
+be-funny = 'be_funny.cli.__main__:main'
 ```
 
 ### Import in Python
